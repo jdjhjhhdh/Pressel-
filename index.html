@@ -2,59 +2,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmação de Idade</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #e0f0ff, #ffffff);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            text-align: center;
-        }
-        .container {
-            background: #ffffffdd;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-        h1 {
-            font-size: 24px;
-            color: #004080;
-            margin-bottom: 20px;
-        }
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            margin: 10px;
-            border: none;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .yes {
-            background-color: #00c851;
-            color: white;
-        }
-        .yes:hover {
-            background-color: #007e33;
-        }
-
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confirmação de Idade</title>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #e0f0ff, #ffffff);
+      display: flex; justify-content: center; align-items: center;
+      height: 100vh; flex-direction: column; text-align: center;
+    }
+    .container {
+      background: #ffffffdd;
+      padding: 30px; border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 24px; color: #004080; margin-bottom: 20px;
+    }
+    .button {
+      display: inline-block; padding: 15px 30px;
+      margin: 10px; border: none; border-radius: 12px;
+      font-size: 18px; font-weight: bold; cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .yes { background-color: #00c851; color: white; }
+    .yes:hover { background-color: #007e33; }
+    
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Você tem mais de 18 anos?</h1>
-        <button class="button yes" onclick="location.href='https://wivasorte.vercel.app'">SIM</button>
-        
+  <div class="container">
+    <h1>Você tem mais de 18 anos?</h1>
+    <button class="button yes" onclick="nextStep()">SIM</button>
+    
+  <script>
+    function nextStep() {
+      setTimeout(() => {
+        window.location.href = "verifica.html";
+      }, 500);
+    }
+  </script>
 </body>
 </html>
