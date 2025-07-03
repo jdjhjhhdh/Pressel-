@@ -7,52 +7,60 @@
     <title>Confirmação de Idade</title>
     <style>
         body {
-            background-color: #b3e5fc;
-            font-family: 'Arial Black', Gadget, sans-serif;
-            color: #0d47a1;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e0f0ff, #ffffff);
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            flex-direction: column;
             text-align: center;
         }
         .container {
-            background-color: #ffffffdd;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            background: #ffffffdd;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 24px;
+            color: #004080;
+            margin-bottom: 20px;
         }
-        button {
-            background-color: #0d47a1;
-            color: white;
-            padding: 0.75rem 2rem;
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
             border: none;
-            border-radius: 8px;
-            font-size: 1.2rem;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background 0.3s ease;
         }
-        button:hover {
-            background-color: #08306b;
+        .yes {
+            background-color: #00c851;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #007e33;
+        }
+        .no {
+            background-color: #ff4444;
+            color: white;
+        }
+        .no:hover {
+            background-color: #cc0000;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Você tem mais de 18 anos?</h1>
-        <button onclick="confirmAge()">SIM</button>
+        <button class="button yes" onclick="location.href='https://ssivasorte.vercel.app'">SIM</button>
+        <button class="button no" onclick="alert('Você precisa ter 18 anos ou mais para continuar.')">NÃO</button>
     </div>
-
-    <script>
-        function confirmAge() {
-            window.location.href = "https://wivasorte.vercel.app";
-        }
-    </script>
 </body>
 </html>
