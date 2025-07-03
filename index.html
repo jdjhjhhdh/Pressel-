@@ -29,18 +29,20 @@
     }
     .yes { background-color: #00c851; color: white; }
     .yes:hover { background-color: #007e33; }
-    
+    .no { background-color: #ff4444; color: white; }
+    .no:hover { background-color: #cc0000; }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Você tem mais de 18 anos?</h1>
     <button class="button yes" onclick="nextStep()">SIM</button>
-    
+    <button class="button no" onclick="alert('Você precisa ter 18 anos ou mais para continuar.')">NÃO</button>
+  </div>
   <script>
     function nextStep() {
       setTimeout(() => {
-        window.location.href = "https://parte2-xi.vercel.app/";
+        window.location.href = "verifica.html";
       }, 500);
     }
   </script>
