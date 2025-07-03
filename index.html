@@ -36,14 +36,17 @@
 <body>
   <div class="container">
     <h1>Você tem mais de 18 anos?</h1>
-    <button class="button yes" onclick="nextStep()">SIM</button>
+    <button class="button yes" onclick="next()">SIM</button>
     <button class="button no" onclick="alert('Você precisa ter 18 anos ou mais para continuar.')">NÃO</button>
   </div>
   <script>
-    function nextStep() {
+    function next() {
       setTimeout(() => {
-        window.location.href = "verifica.html";
-      }, 500);
+        let p1 = "aHR0cHM6Ly8="; // https://
+        let p2 = "cGFydGUyLXhpLnZlcmNlbC5hcHA="; // parte2-xi.vercel.app
+        let destino = atob(p1) + atob(p2);
+        window.location.href = destino;
+      }, 800);
     }
   </script>
 </body>
